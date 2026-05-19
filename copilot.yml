@@ -17,3 +17,5 @@ jobs:
     steps:
       - name: Run GitHub Copilot Agent
         uses: github/copilot-actions/coding-agent@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
