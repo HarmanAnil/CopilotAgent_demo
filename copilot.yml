@@ -1,0 +1,19 @@
+name: Copilot Coding Agent
+
+on:
+  issues:
+    types: [opened, assigned]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  copilot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run GitHub Copilot Agent
+        uses: github/copilot-actions/coding-agent@v1
